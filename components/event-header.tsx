@@ -1,4 +1,7 @@
 import { HeaderGlow, RenewalIndicator } from "@/components/event-motion";
+import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { renewalWebsiteUrl } from "@/lib/event-content";
 
 export function EventHeader() {
   return (
@@ -19,6 +22,18 @@ export function EventHeader() {
           더 새로워진 사이트 환경을 미리 체험하고,
           <br className="hidden sm:inline" /> 여러분의 소중한 피드백을 전달해 주세요!
         </p>
+        <div className="mt-8 flex justify-center">
+          <Button
+            asChild
+            className="group h-auto min-h-14 w-full max-w-md gap-3 whitespace-normal rounded-xl bg-white px-6 py-4 text-base font-extrabold text-indigo-700 shadow-xl shadow-indigo-500/30 ring-4 ring-white/10 transition-[background-color,transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-indigo-50 hover:shadow-indigo-500/40 focus-visible:ring-white focus-visible:ring-offset-slate-900 motion-reduce:transform-none motion-reduce:transition-none sm:text-lg"
+          >
+            <a href={renewalWebsiteUrl} target="_blank" rel="noopener noreferrer">
+              <span>홈페이지 접속하기</span>
+              <ArrowUpRight aria-hidden="true" className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transform-none motion-reduce:transition-none" />
+              <span className="sr-only">(새 탭에서 열림)</span>
+            </a>
+          </Button>
+        </div>
       </div>
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-6 bg-white [clip-path:ellipse(60%_100%_at_50%_100%)]" />
     </header>

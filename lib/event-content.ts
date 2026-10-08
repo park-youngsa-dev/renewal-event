@@ -6,6 +6,7 @@ import {
   UserPlus,
 } from "lucide-react";
 
+export const renewalWebsiteUrl = "https://renewal-pys-web.vercel.app/";
 export const feedbackFormUrl = "https://naver.me/xeFfjjzF";
 
 export const testScopes = [
